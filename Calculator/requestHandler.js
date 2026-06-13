@@ -26,7 +26,7 @@ const requestHandler = (req, res) => {
                     <input type="number" id="first" name="first" placeholder="Enter First Number"/>
                     </br></br>
                     <label for="second">Enter Input 2:</label>
-                    <input type="number" id="second" name="second" placeholder="Enter secon Number" />
+                    <input type="number" id="second" name="second" placeholder="Enter Second Number" />
                     </br></br>
                     <button type="submit">Sum</button>
                 </form>
@@ -36,7 +36,6 @@ const requestHandler = (req, res) => {
     return res.end();
   } else if (req.url === "/result" && req.method === "POST") {
     sumRequestHandler(req, res);
-    return res.end();
   } else {
     res.setHeader("Content-Type", "text/html");
     res.write(`
